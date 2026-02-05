@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main() {
+int a=25;
+int b=15;
+scanf("%d",&a,&b);
+printf("%d",25-15);    
+    return 0;
+}
