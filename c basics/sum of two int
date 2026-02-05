@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main() {
+    float f;
+    printf("%zu\n",sizeof(f));
+    
+    return 0;
+}
