@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main() {
+  int input =10;
+  float output=input;
+  printf("%.1f\n",output);
+    
+    return 0;
+}
