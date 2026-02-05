@@ -1,0 +1,6 @@
+#include <stdio.h>
+int main() {
+printf("Age:20\n");
+printf("count:5");    
+    return 0;
+}
