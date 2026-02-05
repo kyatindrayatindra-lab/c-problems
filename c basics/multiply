@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main(){
+    int a=10;
+    int b=5;
+    scanf("%d %d",&a,&b);
+    printf("%d",10-5);
+    return 0;
+
+}
