@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main() {
+char name;
+char name:x;
+char name:B;
+printf("%c",x);
+ printf("%c",B);   
+    return 0;
+}
