@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    scanf("%d", &n);
+
+    ++n;
+    printf("Pre:%d ", n); 
+    
+    n++;
+    printf("Post:%d", n);
+
+    return 0;
+}
