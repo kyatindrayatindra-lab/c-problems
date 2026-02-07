@@ -1,15 +1,18 @@
 #include <stdio.h>
 int main() {
 
-    int age;
+    int ang1,ang2,ang3,sum;
 
-    scanf("%d",&age);
+    scanf("%d %d %d",&ang1,&ang2,&ang3);
 
-    if (age >= 18) {
-        printf("Eligible for vote");
+    sum = ang1 + ang2 + ang3;
+
+    if (sum == 180) {
+        printf("Valid Triangle");
     } else {
-        printf("Not Eligible for vote");
+        printf("Invalid Triangle");
     }
+
 
     return 0;
 }
