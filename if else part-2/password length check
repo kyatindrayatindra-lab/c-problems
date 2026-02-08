@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int length;
+
+    scanf("%d", &length);
+
+    if (length >= 8) {
+        printf("Strong Password");
+    } else {
+        printf("Weak Password");
+    }
+
+    return 0;
+}
