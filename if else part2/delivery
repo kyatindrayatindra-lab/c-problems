@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    int cartValue;
+    scanf("%d", &cartValue);
+
+    if (cartValue >= 499)
+        printf("Free Delivery");
+    else
+        printf("Delivery Charges Apply");
+
+    return 0;
+}
