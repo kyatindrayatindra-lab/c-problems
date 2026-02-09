@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int N, temp, digits = 0, sum = 0;
+
+    scanf("%d", &N);
+
+    /* Count number of digits */
+    for (temp = N; temp > 0; temp /= 10) {
+        digits++;
+    }
+
+    /* Calculate Armstrong sum */
+    for (temp = N; temp > 0; temp /= 10) {
+        int digit = temp % 10;
+        int power = 1;
+
+        for (int i = 1; i <= digits; i++) {
+            power *= digit;
+        }
+
+        sum += power;
+    }
+
+    if (sum == N)
+        printf("Yes");
+    else
+        printf("No");
+
+    return 0;
+}
