@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int N, i, j, isPrime, count = 0;
+
+    scanf("%d", &N);
+
+    for (i = 2; i <= N; i++) {
+        isPrime = 1;   // assume i is prime
+
+       for (j = 2; j * j <= i; j++) {
+            if (i % j == 0) {
+ isPrime = 0;
+                break;
+     }
+       }
+        if (isPrime == 1) {
+            count++;
+        }
+    }
+
+    printf("%d", count);
+
+    return 0;
+}
