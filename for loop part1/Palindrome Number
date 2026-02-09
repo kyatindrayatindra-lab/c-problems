@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int N, rev = 0, temp;
+
+    scanf("%d", &N);
+    temp = N;
+
+    for (; temp > 0; temp /= 10) {
+        rev = rev * 10 + (temp % 10);
+    }
+
+    if (rev == N)
+        printf("Yes");
+    else
+        printf("No");
+
+    return 0;
+}
