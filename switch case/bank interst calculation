@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+int accounttype, years;
+float interestRate;
+
+scanf("%d", &accounttype);
+scanf("%d", &years);
+
+switch(accounttype) {
+case 1:
+interestRate = 4.0;
+printf("Interest %.0f%%\n", interestRate);
+break;
+
+case 2:
+if (years <= 3)
+interestRate = 5.0;
+else
+interestRate = 7.0;
+
+printf("Interest %.0f%%\n", interestRate);
+break;
+default:
+printf("Invalid account type\n");
+}
+
+return 0;
+}
