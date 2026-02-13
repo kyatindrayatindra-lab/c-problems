@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int flightClass, weight;
+    int charge = 0;
+
+    scanf("%d", &flightClass);
+    scanf("%d", &weight);
+
+    switch (flightClass) {
+
+        case 1:  // Economy
+            charge = weight * 300;
+            printf("Extra Baggage Charge ₹%d", charge);
+            break;
+
+        case 2:  // Business
+            if (weight <= 3) {
+                printf("Free");
+            } else {
+                charge = (weight - 3) * 300;
+                printf("Extra Baggage Charge ₹%d", charge);
+            }
+            break;
+
+        default:
+            printf("Invalid Flight Class");
+    }
+
+    return 0;
+}
