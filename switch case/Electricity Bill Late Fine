@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+int delayDays;
+int finePerDay = 0;
+int totalFine;
+
+scanf("%d", &delayDays);
+
+switch (delayDays <= 5 ? 1 : 
+delayDays <= 10 ? 2 : 3) {
+
+case 1:
+finePerDay = 50;
+break;
+
+case 2:
+finePerDay = 100;
+break;
+
+case 3:
+finePerDay = 200;
+break;
+}
+
+totalFine = delayDays * finePerDay;
+
+printf("₹%d\n", totalFine);
+
+return 0;
+}
