@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main() {
+int hours;
+
+printf("Enter power cut duration in hours: ");
+scanf("%d", &hours);
+
+switch (hours) {
+case 0:
+case 1:
+printf("Short Interruption");
+break;
+
+case 2:
+case 3:
+case 4:
+printf("Medium Interruption");
+break;
+
+default:
+if (hours > 4)
+printf("Long Interruption");
+break;
+}
+
+return 0;
+}
