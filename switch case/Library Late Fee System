@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+int bookType, daysLate;
+int lateFee = 0;
+
+scanf("%d", &bookType);
+scanf("%d", &daysLate);
+
+switch(bookType) {
+case 1:  
+lateFee = daysLate * 2;
+break;
+
+case 2: 
+lateFee = daysLate * 5;
+break;
+
+default:
+printf("Invalid book type");
+return 0;
+}
+
+printf("Late Fee ₹%d", lateFee);
+
+    return 0;
+}
