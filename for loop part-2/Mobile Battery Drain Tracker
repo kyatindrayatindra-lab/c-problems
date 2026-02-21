@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+int batteryPercent;
+int N;
+int drain;
+int remaining;
+
+  
+scanf("%d", &batteryPercent);
+
+    
+scanf("%d", &N);
+
+remaining = batteryPercent;
+
+    
+for(int i = 0; i < N; i++) {
+scanf("%d", &drain);
+remaining -= drain;
+}
+
+    
+if(remaining < 0) {
+remaining = 0;
+}
+
+   
+printf("Remaining Battery: %d%%", remaining);
+
+return 0;
+}
