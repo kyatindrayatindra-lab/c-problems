@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+int N, loss, total = 0, highLossDays = 0;
+
+scanf("%d", &N);
+
+for(int i = 0; i < N; i++) {
+scanf("%d", &loss);
+total += loss;
+if(loss > 100)
+highLossDays++;
+}
+
+printf("Total Loss: %d\n", total);
+printf("High Loss Days: %d\n", highLossDays);
+
+return 0;
+}
