@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+int N;
+scanf("%d", &N);
+
+int status[N];
+int i = 0;
+
+while(i < N) {
+scanf("%d", &status[i]);
+i++;
+}
+
+int currentStreak = 0, maxStreak = 0;
+i = 0;
+
+while(i < N) {
+if(status[i] == 0) {
+currentStreak++;
+if(currentStreak > maxStreak) {
+maxStreak = currentStreak;
+}
+} else {
+currentStreak = 0;
+}
+i++;
+}
+
+printf("Longest Failure Streak: %d\n", maxStreak);
+
+return 0;
+}
