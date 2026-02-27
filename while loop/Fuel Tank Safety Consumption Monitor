@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+int fuel, N;
+int i = 0;
+int consumed;
+int completedTrips = 0;
+
+scanf("%d", &fuel);
+scanf("%d", &N);
+
+int trips[N];
+
+while(i < N) {
+scanf("%d", &trips[i]);
+i++;
+}
+
+i = 0;
+
+while(i < N) {
+if(fuel >= trips[i]) {
+fuel -= trips[i];
+completedTrips++;
+} else {
+break;
+}
+i++;
+}
+
+printf("Completed Trips: %d\n", completedTrips);
+printf("Remaining Fuel: %d\n", fuel);
+
+return 0;
+}
