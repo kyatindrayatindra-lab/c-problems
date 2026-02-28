@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main() {
+int dataPack, n;
+int usage[100];
+int i = 0;
+int exhaustedDay = 0;
+int overused = 0;
+
+scanf("%d", &dataPack);
+scanf("%d", &n);
+
+for(i = 0; i < n; i++) {
+scanf("%d", &usage[i]);
+}
+
+int remaining = dataPack;
+i = 0;
+
+while(i < n) {
+remaining = remaining - usage[i];
+
+if(remaining <= 0) {
+exhaustedDay = i + 1;
+if(remaining < 0)
+overused = -remaining;
+else
+overused = 0;
+break;
+}
+
+i++;
+}
+
+if(exhaustedDay == 0) {
+printf("Exhausted Day: Not Exhausted\n");
+printf("Overused Data: 0");
+} else {
+printf("Exhausted Day: %d\n", exhaustedDay);
+printf("Overused Data: %d", overused);
+}
+
+return 0;
+}
