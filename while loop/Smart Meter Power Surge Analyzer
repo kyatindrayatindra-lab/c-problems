@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+int N, i = 0;
+int power, maxUsage = 0, surgeCount = 0;
+
+scanf("%d", &N);
+
+while(i < N) {
+scanf("%d", &power);
+
+if(power > maxUsage) {
+maxUsage = power;
+}
+
+if(power > 5) {
+surgeCount++;
+}
+
+i++;
+}
+
+printf("Max Usage: %d\n", maxUsage);
+printf("Surge Hours: %d\n", surgeCount);
+
+return 0;
+}
