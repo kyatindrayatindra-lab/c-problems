@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+int walletBalance, N;
+int purchase, i = 0;
+int successfulPurchases = 0;
+
+scanf("%d", &walletBalance);
+scanf("%d", &N);
+
+while(i < N)
+{
+scanf("%d", &purchase);
+
+if(walletBalance >= purchase)
+{
+walletBalance = walletBalance - purchase;
+successfulPurchases++;
+}
+else
+{
+break;
+}
+
+i++;
+}
+
+printf("Successful Purchases: %d\n", successfulPurchases);
+printf("Final Balance: %d", walletBalance);
+
+return 0;
+}
