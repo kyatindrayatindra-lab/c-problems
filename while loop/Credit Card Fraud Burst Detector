@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+int N, count = 0;
+int highValueCount = 0, consecutiveHigh = 0;
+int fraudAttempt = -1;
+
+scanf("%d", &N);
+
+while(count < N) {
+int amount;
+scanf("%d", &amount);
+
+if(amount >= 50000) {
+highValueCount++;
+consecutiveHigh++;
+
+if(consecutiveHigh == 3 && fraudAttempt == -1) {
+fraudAttempt = count + 1;
+}
+} else {
+consecutiveHigh = 0;
+}
+
+count++;
+}
+
+if(fraudAttempt != -1)
+printf("Fraud Triggered At Attempt: %d\n", fraudAttempt);
+else
+printf("Fraud Triggered At Attempt: Not Triggered\n");
+
+printf("High-Value Transactions: %d\n", highValueCount);
+
+return 0;
+}
