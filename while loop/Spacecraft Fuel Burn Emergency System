@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+int fuel, N;
+int count = 0;
+int emergencyStage = -1;
+int wastedFuel = 0;
+
+scanf("%d", &fuel);
+scanf("%d", &N);
+
+while(count < N) {
+int burn;
+scanf("%d", &burn);
+
+fuel -= burn;
+
+if(fuel < 0 && emergencyStage == -1) {
+emergencyStage = count + 1;
+wastedFuel = -fuel;
+}
+
+count++;
+}
+
+if(emergencyStage != -1)
+printf("Emergency Stage: %d\n", emergencyStage);
+else
+printf("Emergency Stage: Not Occurred\n");
+
+printf("Fuel Wasted: %d\n", wastedFuel);
+
+return 0;
+}
