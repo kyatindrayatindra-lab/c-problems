@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main()
+{
+int n,i,x,count=0;
+int marks[100];
+
+printf("Enter number of students: ");
+scanf("%d",&n);
+
+printf("Enter marks:\n");
+for(i=0;i<n;i++)
+scanf("%d",&marks[i]);
+
+printf("Enter mark to search: ");
+scanf("%d",&x);
+
+for(i=0;i<n;i++)
+{
+if(marks[i]==x)
+count++;
+}
+
+printf("Frequency = %d",count);
+
+return 0;
+}
