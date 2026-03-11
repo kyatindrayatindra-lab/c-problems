@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+int N, i, roll, expectedSum, actualSum = 0, missing;
+
+printf("Enter N:");
+scanf("%d", &N);
+
+expectedSum = N * (N + 1) / 2;
+
+printf("Enter %d roll numbers:\n", N-1);
+
+for(i = 1; i <= N-1; i++) {
+scanf("%d", &roll);
+actualSum = actualSum + roll;
+}
+
+missing = expectedSum - actualSum;
+
+printf("Missing roll number is: %d", missing);
+
+return 0;
+}
