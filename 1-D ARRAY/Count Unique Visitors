@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    int n, i, j, count = 0;
+
+    printf("Enter number of visitors: ");
+    scanf("%d", &n);
+
+    int arr[n];
+
+    printf("Enter visitor IDs:\n");
+    for(i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    for(i = 0; i < n; i++) {
+        int isDuplicate = 0;
+
+        for(j = 0; j < i; j++) {
+            if(arr[i] == arr[j]) {
+                isDuplicate = 1;
+                break;
+            }
+        }
+
+        if(isDuplicate == 0) {
+            count++;
+        }
+    }
+
+    printf("Distinct count = %d\n", count);
+
+    return 0;
+}
