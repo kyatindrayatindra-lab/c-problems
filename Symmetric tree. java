@@ -1,0 +1,38 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+class Solution {
+    public boolean isSymmetric(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root.left);
+        queue.offer(root.right);
+
+        while (!queue.isEmpty()) {
+            TreeNode t1 = queue.poll();
+            TreeNode t2 = queue.poll();
+
+            // Both null -> valid pair, continue
+            if (t1 == null && t2 == null) {
+                continue;
+            }
+            // One is null or values mismatch -> not symmetric
+            if (t1 == null || t2 == null || t1.val != t2.val) {
+                return false;
+            }
+
+            // Push outer pair
+            queue.offer(t1.left);
+            queue.offer(t2.right);
+
+            // Push inner pair
+            queue.offer(t1.right);
+            queue.offer(t2.left);
+        }
+
+        return true;
+    }
+}
